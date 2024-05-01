@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+    <a class="p-2 text-dark" href="{% url 'index' %}">Главная</a>
+    <nav class="my-2 my-md-0 mr-md-3">
+        <a class="p-2 text-dark" href="{% url 'parents' %}">Для родителей</a>
+        <a class="p-2 text-dark" href="{% url 'students' %}">Для учеников</a>
+        <a class="p-2 text-dark" href="{% url 'methodically' %}">Методические пособия</a>
+        <a class="p-2 text-dark" href="{% url 'info' %}">Дополнительная информация</a>
+    </nav>
+</nav>

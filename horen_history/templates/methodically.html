@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %} Методические пособия {% endblock %}
+
+{% block content %}
+
+    <div class="container">
+                    <!-- Начало блока с отдельным постом -->
+                    {% for post in page %}
+                        {% include "includes/post.html" with post=post %}
+                    {% endfor %}
+
+                    <!-- Здесь постраничная навигация паджинатора -->
+                    {% if page.has_other_pages %}
+                        {% include "includes/paginator.html" with items=page paginator=paginator%}
+                    {% endif %}
+    </div>
+
+{% endblock %}

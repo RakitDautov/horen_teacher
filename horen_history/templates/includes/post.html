@@ -1,0 +1,21 @@
+<div class="card mb-3 mt-1 shadow-sm">
+  <!-- Отображение текста поста -->
+  <div class="card-body">
+    <p class="card-text">
+        {{ post.title }} <br>
+        {{ post.text|linebreaksbr }}
+    </p>
+      {% if post.link %}
+      <!-- Ссылка источника -->
+     <a class="p-2 text-dark" href={{post.link}}>{{post.link}}</a>
+      {% endif %}
+      {% if post.photo %}
+      <!-- Фото публикации поста -->
+      <div class="card-img md-3 mt-1">
+     <img src="/static/media/{{post.photo}}">
+      </div>
+      {% endif %}
+      <!-- Дата публикации поста -->
+      <small class="text-muted">{{ post.pub_date }}</small>
+  </div>
+</div>
